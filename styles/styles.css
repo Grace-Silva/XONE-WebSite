@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+:root{
+    --white: #F5F6FA;
+    --mint: #82D3AA;
+    --black: #3A403F;
+    --black2: #090a09;
+    --neon-green: #00B300; 
+    --fontsize: 1.2em;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    background: var(--white);
+    color: var(--black);
+}
+
+/* FUENTE DE LOS TITULOS:
+
+font-family: 'Caveat Brush', cursive;*/
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 4em;
+    border: solid red;
+    z-index: 1000;
+    background: transparent;
+}
+
+header .logo{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+header .logo .logo-img{
+    width: 2em;
+}
+
+header .logo .logo-text{
+    font-family: 'Caveat Brush', cursive;
+    color: var(--black2);
+    font-weight: 500;
+    font-size: 3em;
+}
+
+header nav .navbar{
+    display: flex;
+    gap: 16px;
+}
+
+
+header nav .navbar * a{
+    padding: 8px;
+    background: transparent;
+    border-radius: 8px;
+    border: solid;
+    font-size: var(--fontsize);
+    font-weight: 600;
+    color: var(--black);
+    transition: .2s ease;
+}
+
+header nav .navbar * a:hover{
+    background: var(--green);
+}
+
+header .login-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: none;
+    box-shadow: 2px 2px 5px var(--black);
+    background: transparent;
+    transition: .2s ease;
+}
+
+header .login-btn:hover{
+    color: var(--white);
+    background: var(--neon-green);
+    box-shadow: 0 0 10px var(--neon-green), 0 0 40px var(--neon-green);
+}
+
+header .login-btn a{
+    font-size: var(--fontsize);
+    font-weight: 600;
+    color: var(--black);
+}
+header .login-btn a:hover{
+    color: var(--white);
+}
