@@ -66,6 +66,7 @@ header .bars-menu{
     box-shadow: 2px 2px 5px var(--black);
     cursor: pointer;
     display: none;
+    z-index: 10001;
 }
 
 header .bars-menu i{
@@ -93,8 +94,8 @@ header nav .navbar * a:hover{
     border-bottom: solid var(--black);
 }
 
-header .login-btn{
-    display: flex;
+ .btn{
+    display: inline-flex;
     justify-content: space-between;
     align-items: center;
     gap: 12px;
@@ -110,6 +111,22 @@ header .login-btn{
     color: var(--black);
 }
 
-header .login-btn:hover{
+.btn:hover{
     box-shadow: 0 0 20px #3a403f84, 0 0 20px #3A403F84;
+}
+
+section .hero-text .btn{
+    font-size: 1.1em;
+}
+
+section .hero-text .btn:first-of-type{
+    color: var(--white);
+    background-color: var(--neon-green);
+    margin-right: 16px;
+}
+section .hero-text .btn:first-of-type:hover{
+    box-shadow: 0 0 20px #00B300, 0 0 20px #00B300;    
+}
+section .hero-img img{
+    transform: scaleX(-1);
 }
