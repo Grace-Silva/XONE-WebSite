@@ -115,18 +115,74 @@ header nav .navbar * a:hover{
     box-shadow: 0 0 20px #3a403f84, 0 0 20px #3A403F84;
 }
 
-section .hero-text .btn{
+section{
+    border: solid blue;
+    padding: 0 4em;
+}
+
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center; 
+    gap: 4rem;
+}
+
+.hero .hero-text{
+    border: solid red; 
+    color: var(--black);   
+}
+
+.hero-text h3{
+    font-size: var(--fontsize);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.hero-text h2{
+    margin-bottom: 4px;
+    font-weight: 500;
+    font-family: 'Caveat Brush', cursive;
+    font-size: 2rem;
+}
+
+.hero-text h2 i{
+    margin-left: 12px;
+}
+
+.hero-text p{
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.hero-text p span{
+    font-family: 'Caveat Brush', cursive;
+    font-size: 2rem;
+    color: var(--neon-green);
+}
+
+.hero .hero-text .btn{
     font-size: 1.1em;
 }
 
-section .hero-text .btn:first-of-type{
+.hero .hero-text .btn:first-of-type{
     color: var(--white);
     background-color: var(--neon-green);
     margin-right: 16px;
 }
-section .hero-text .btn:first-of-type:hover{
+
+.hero .hero-text .btn:first-of-type:hover{
     box-shadow: 0 0 20px #00B300, 0 0 20px #00B300;    
 }
-section .hero-img img{
+
+.hero .hero-img{
+    border: solid green;
+}
+/*
+.hero .hero-img img{
+    border: solid red;
     transform: scaleX(-1);
 }
