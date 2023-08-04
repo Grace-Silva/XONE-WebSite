@@ -253,7 +253,7 @@ section{
     }
 
     .social-media .social-media-icon{
-        display: inline-block;
+        display: inline;
         margin: 0 1em;
     }
 }
@@ -275,6 +275,17 @@ section{
 
     .hero .hero-img{
         text-align: center;
+    }
+
+    .social-media{
+        right: 8%;
+        transform: translateY(-50%);
+        padding: 0 1.2em;
+    }
+
+    .social-media .social-media-icon{
+        display: block;
+        margin: 1em 0;
     }
 
 }
