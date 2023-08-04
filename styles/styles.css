@@ -5,6 +5,7 @@
     --mint: #82D3AA;
     --black: #3A403F;
     --black2: #090a09;
+    --green1: #077D08;
     --neon-green: #00B300; 
     --fontsize: 1.2em;
 }
@@ -136,11 +137,11 @@ section{
 .hero-text h3{
     font-size: var(--fontsize);
     font-weight: 600;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
 }
 
 .hero-text h2{
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     font-weight: 500;
     font-family: 'Caveat Brush', cursive;
     font-size: 2rem;
@@ -159,7 +160,8 @@ section{
 .hero-text p span{
     font-family: 'Caveat Brush', cursive;
     font-size: 2rem;
-    color: var(--neon-green);
+    color: var(--green1);
+    font-style: italic;
 }
 
 .hero .hero-text .btn{
@@ -201,10 +203,40 @@ section{
 .hero .hero-img{
     width: 100%;
     height: auto;
-    border: solid green;
+}
+
+.hero .hero-img img{
+    filter: drop-shadow(6px 6px 12px #3a403f84);
 }
 /*
 .hero .hero-img img{
     border: solid red;
     transform: scaleX(-1);
+}
+
+/* social media icons */
+
+.social-media{
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    transform: translateY(-50%);
+    padding: 0 1.2em;
+}
+
+.social-media .social-media-icon{
+    display: block;
+    padding: 6px;
+    margin: 1em 0;
+    background: var(--green1);
+    border-radius: 4px;
+    color: var(--white);
+    box-shadow: 2px 2px 5px var(--black);
+    transition: .3s ease;
+}
+
+.social-media .social-media-icon:hover{
+    background: var(--black2);
+    color: var(--white);
+    transform: translateY(-8px);
 }
