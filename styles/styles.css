@@ -20,6 +20,7 @@
 }
 
 body{
+    border: solid red;
     font-family: 'Nunito Sans', sans-serif;
     background: var(--white);
     color: var(--black);
@@ -39,7 +40,7 @@ header{
     align-items: center;
     padding: 2em 4em;
     z-index: 1000;
-    background: transparent;
+    background: var(--white);
     box-shadow: 0px 1px 3px #3a403f40;
 }
 
@@ -127,7 +128,7 @@ section{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center; 
-    gap: 4rem;
+    gap: 2.5rem;
 }
 
 .hero .hero-text{
@@ -239,4 +240,41 @@ section{
     background: var(--black2);
     color: var(--white);
     transform: translateY(-8px);
+}
+
+/* 1300px desktop and laptop */
+@media(max-width: 1300px){
+    
+    .social-media{
+        top:  80%;
+        right: 4rem;
+        padding: 0;
+        transform: translateY(0);
+    }
+
+    .social-media .social-media-icon{
+        display: inline-block;
+        margin: 0 1em;
+    }
+}
+
+@media(max-width: 1060px){
+
+    .hero{
+        padding: 12rem 0 0 0;
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text{
+        text-align: center;
+    }
+
+    .hero-text p{
+        margin-bottom: 16px;
+    }
+
+    .hero .hero-img{
+        text-align: center;
+    }
+
 }
