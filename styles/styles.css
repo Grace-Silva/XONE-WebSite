@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap');
 
 :root{
-    --white: #F0F1F3;
+    --white: #fafafa;
     --mint: #82D3AA;
     --black: #3A403F;
     --black2: #090a09;
     --green1: #077D08;
     --neon-green: #00B300; 
-    --fontsize: 1.2em;
+    --delay: all ease .5s;
 }
 
+html{
+    scroll-behavior: smooth;
+    user-select: none;
+}
 
 *{
     margin: 0;
@@ -23,6 +27,8 @@ body{
     font-family: 'Nunito Sans', sans-serif;
     background: var(--white);
     color: var(--black);
+    min-height: 100vh;
+    position: relative;
 }
 
 /* FUENTE DE LOS TITULOS:
@@ -31,16 +37,16 @@ font-family: 'Caveat Brush', cursive;*/
 
 header{
     position: fixed;
-    width: 100%;
     top: 0;
-    right: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2em 4em;
-    z-index: 1000;
+    z-index: 100;
     background: var(--white);
-    box-shadow: 0px 1px 3px #3a403f40;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
 }
 
 header .logo{
@@ -56,39 +62,46 @@ header .logo .logo-img{
 header .logo .logo-text{
     font-family: 'Caveat Brush', cursive;
     color: var(--black2);
-    font-weight: 500;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 header .bars-menu{
-    padding: 12px;
-    border-radius: 50%;
-    background: transparent;
-    box-shadow: 2px 2px 5px var(--black);
-    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    padding: 8px;
     display: none;
-    z-index: 10001;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: solid 1px rgba(0, 0, 0, .1);
+    background: var(--white);
+    box-shadow: 8px 4px 16px rgba(0, 0, 0, .1);
+    transition: var(--delay);
+    cursor: pointer;
+    z-index: 1000;
 }
 
 header .bars-menu i{
-    font-size: var(--fontsize);
+    font-size: 1.1em;
 }
 
 
 header nav .navbar{
     display: flex;
-    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.1em;
 }
 
 
 header nav .navbar * a{
-    padding: 8px;
-    background: transparent;
+    padding: 4px;
     border-bottom: 2px transparent;
-    font-size: var(--fontsize);
-    font-weight: 600;
+    font-size: 1.1em;
+    font-weight: 500;
     color: var(--black);
-    transition: .2s ease;
+    font-size: 1.1em;
+    transition: all ease .5s;
 }
 
 header nav .navbar * a:hover{
@@ -101,81 +114,65 @@ header nav .navbar * a:hover{
     align-items: center;
     gap: 12px;
     padding: 12px 24px;
-    border: none;
-    box-shadow: 2px 2px 5px var(--black);
+    border: solid 1px rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
     background: transparent;
-    transition: .2s ease;
-    font-size: 1.2em;
+    transition: var(--delay);
+    font-size: 1.1em;
     font-weight: 600;
     cursor: pointer;
-    transition: .2s ease;
     color: var(--black);
+    scale: .9;
+    transition: .2s ease;
 }
-
 .btn:hover{
-    box-shadow: 0 0 20px #3a403f84, 0 0 20px #3A403F84;
+    scale: 1;
 }
 
 section{
-    padding: 0 4em;
+    padding: 4em;
 }
 
 .hero{
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     position: relative;
+    top: 5vh;
+    left: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center; 
-    gap: 2.5rem;
 }
 
 .hero .hero-text{
     color: var(--black);   
 }
 
-.hero-text h3{
-    font-size: var(--fontsize);
-    font-weight: 600;
-    margin-bottom: 8px;
-}
-
 .hero-text h2{
-    margin-bottom: 8px;
-    font-weight: 500;
+    margin-bottom: 4px;
     font-family: 'Caveat Brush', cursive;
-    font-size: 2rem;
-}
-
-.hero-text h2 i{
-    margin-left: 12px;
+    font-size: 2em;
 }
 
 .hero-text p{
     font-weight: 500;
-    font-size: 1.2rem;
-    margin-bottom: 8px;
+    font-size: 1.2em;
+    margin-bottom: 4px;
 }
 
 .hero-text p span{
     font-family: 'Caveat Brush', cursive;
-    font-size: 2rem;
+    font-size: 2em;
     color: var(--green1);
     font-style: italic;
 }
 
-.hero .hero-text .btn{
-    font-size: 1.1em;
-}
-
 .hero .hero-text .btn:first-of-type{
+    border: none;
     color: var(--white);
     background-color: var(--neon-green);
-    margin-right: 16px;
-}
-
-.hero .hero-text .btn:first-of-type:hover{
-    box-shadow: 0 0 20px #00B300, 0 0 20px #00B300;    
+    margin-right: 8px;
 }
 
 .hero .hero-text .btn:first-of-type .clickMe{
@@ -206,61 +203,27 @@ section{
 }
 
 .hero .hero-img img{
-    filter: drop-shadow(6px 6px 12px #3a403f84);
-}
-/*
-.hero .hero-img img{
-    border: solid red;
-    transform: scaleX(-1);
+    filter: drop-shadow(4px 4px 8px rgba(0,0,0,.1));
 }
 
-/* social media icons */
-
-.social-media{
-    position: absolute;
-    top: 50%;
-    right: 8%;
-    transform: translateY(-50%);
-    padding: 0 1.2em;
-}
-
-.social-media .social-media-icon{
-    display: block;
-    padding: 6px;
-    margin: 1em 0;
-    background: var(--green1);
-    border-radius: 4px;
-    color: var(--white);
-    box-shadow: 2px 2px 5px var(--black);
-    transition: .3s ease;
-}
-
-.social-media .social-media-icon:hover{
-    background: var(--black2);
-    color: var(--white);
-    transform: translateY(-8px);
-}
 
 /* 1300px desktop and laptop */
 @media(max-width: 1300px){
     
-    .social-media{
-        top:  80%;
-        right: 4rem;
-        padding: 0;
-        transform: translateY(0);
+    header, section{
+        padding: 2em;
     }
-
-    .social-media .social-media-icon{
-        display: inline-block;
-        margin: 0 1em;
+    
+    .hero{
+        top: 0;
     }
+    
 }
 
 @media(max-width: 1060px){
 
     .hero{
-        padding: 12rem 0 0 0;
+        top: 25vh;
         grid-template-columns: 1fr;
     }
 
@@ -276,61 +239,122 @@ section{
         text-align: center;
     }
 
-    .social-media{
-        right: 12%;
-        transform: translateY(-50%);
-        padding: 0 1.2em;
-    }
-
-    .social-media .social-media-icon{
-        display: block;
-        margin: 1em 0;
-    }
 }
 
-@media (max-width: 960px){
+@media (max-width: 980px){
 
     header .bars-menu{
-        display: block;
+        display: flex;
         order: 1;
     }    
+    header .bars-menu:hover{
+        scale: 1.1;
+    }
 
     header nav .navbar{
-        box-shadow:  2px 2px 5px var(--black);
-        position: absolute;
-        top: 100%;
-        right: -100%;
-        width: 260px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        min-width: calc(50% - 100px);
         min-height: 100vh;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        gap: .5em;
+        padding: 2em;
         justify-content: space-evenly;
-        transition: .2s ease;
-        background: var(--white);
-        transition: .2s ease;
+        background: var(--green1);
+        color: var(--white);
+        border: 1px solid rgba(0,0,0,.1);
+        box-shadow: -4px 0 8px rgba(0, 0, 0, .2);
+        transition: all ease-in-out .5s;
+        z-index: 1000;
     }
+
+    header nav .navbar * a, .btn{
+        color: var(--white);
+    }
+    header nav .navbar * a:hover{
+        border-bottom: solid var(--white);
+    }
+
+    header nav .navbar .btn{
+        border: solid 1px var(--white);
+        box-shadow: none;
+    }
+
+    .hero .hero-text .btn{
+        color: var(--black);
+    }
+
 
     header nav .navbar.active{
-        right: 0;
+        right: -100%;
     }
 
-    .social-media{
-        right: 78%;
-    }
 }
 
-@media(max-width: 750px){
+@media(max-width: 768px){
     
-    section{
-        padding: 0 2rem;
+    header nav .navbar{
+        min-width: 50vw;
+    }
+
+
+    .hero .hero-img img{
+        width: 480px;
+    }
+
+}
+
+@media(max-width: 576px){
+
+    header .logo .logo-text{
+        font-size: 2em;
+    }
+
+    .hero .hero-text p span{
+        font-size: 1.7em;
     }
 
     .hero .hero-img img{
-        width: 420px;
+        width: 400px;
     }
 
-    .social-media{
-        right: 80%;
+}
+
+@media(max-width: 320px){
+
+    header{
+        padding: 1.1em;
+    }
+
+    header .logo .logo-text{
+        display: none;
+    }
+
+    header nav .navbar{
+        min-width: 100vw;
+    }
+
+    .hero{
+        top: 10vh;
+    }
+
+    .hero .hero-text *{
+        margin-bottom: 16px;
+    }
+
+    .hero .hero-text h2{
+        font-size: 1.8em;
+    }
+    .hero .hero-text p{
+        font-size: 1.1em;
+        font-weight: 500;    
+    }
+
+    .hero .hero-img img{
+        width: 280px;
     }
 }
